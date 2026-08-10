@@ -1,0 +1,40 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gold-text">CMS TRAVELS & SOLUTIONS</span>
+                    </h1>
+                    <p class="hero-subtitle">Your Trusted Visa & Travel Partner</p>
+                    <div class="hero-buttons">
+                        <a href="{% url 'contact' %}" class="btn-primary">
+                            <i class="fas fa-phone"></i> GET QUOTE
+                        </a>
+                        <a href="tel:+919876543210" class="btn-secondary">
+                            <i class="fas fa-phone-alt"></i> CALL NOW
+                        </a>
+                    </div>
+                </div>
+                <!-- Optional floating image -->
+                <div class="hero-image">
+                    <img src="{% static 'images/passport-plane.png' %}" alt="Travel">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview -->
+<section class="about-preview">
+    <div class="container">
+        <h2>Welcome to CMS Travels</h2>
+        <p>Your trusted partner for visa, passport, and travel solutions since 2010.</p>
+    </div>
+</section>
+{% endblock %}

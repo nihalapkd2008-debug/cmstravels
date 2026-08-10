@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team</p>
+        
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn-primary">Send Enquiry</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Reach Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Kochi, Kerala, India</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> info@cmstravels.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
